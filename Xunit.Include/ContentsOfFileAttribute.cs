@@ -6,11 +6,11 @@ using Xunit.Sdk;
 
 namespace Xunit.Include;
 
-public class FileContentAttribute : DataAttribute
+public class ContentsOfFileAttribute : DataAttribute
 {
     private readonly string[] FileNames;
 
-    public FileContentAttribute(params string[] fileNames)
+    public ContentsOfFileAttribute(params string[] fileNames)
     {
         FileNames = fileNames;
     }

@@ -6,11 +6,4 @@
     <RepositoryUrl>https://github.com/ku3mich/Xunit.Include/</RepositoryUrl>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Update="SonarAnalyzer.CSharp" Version="9.*">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
 </Project>
