@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ps", "ps", "{9EE1EEEF-2321-
 		ps\run-build-push-local.ps1 = ps\run-build-push-local.ps1
 		ps\run-pack.ps1 = ps\run-pack.ps1
 		ps\run-push.ps1 = ps\run-push.ps1
-		ps\run-test.ps1 = ps\run-test.ps1
+		ps\run-tests.ps1 = ps\run-tests.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{A9582C10-7261-42F2-B723-FA6577E25B1E}"
