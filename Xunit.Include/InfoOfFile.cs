@@ -16,4 +16,6 @@ public class InfoOfFile : File<FileInfo>
         FileName = fileName;
         Init(fileName);
     }
+
+    public static implicit operator FileInfo?(InfoOfFile streamOfFile) => streamOfFile?.Content;
 }

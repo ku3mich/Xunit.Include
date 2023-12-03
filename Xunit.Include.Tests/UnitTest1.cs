@@ -12,7 +12,15 @@ public class UnitTest1(ITestOutputHelper log)
     {
         using var streamReader = new StreamReader(stream.Content);
         var content = await streamReader.ReadToEndAsync();
-        
+
+        log.WriteLine(content);
+    }
+
+    [Theory]
+    [ContentsOfFile("files/one")]
+    [ContentsOfFile("files/two")]
+    public void Test2(ContentsOfFile content)
+    {
         log.WriteLine(content);
     }
 }

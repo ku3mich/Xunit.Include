@@ -2,19 +2,13 @@
 // Licensed under the terms of the MIT license. See LICENCE for details.
 
 using System.Reflection;
-using Xunit.Abstractions;
 using Xunit.Sdk;
 
 namespace Xunit.Include;
 
-public class InfoOfFileAttribute : DataAttribute, IXunitSerializable
+public class InfoOfFileAttribute(params string[] fileNames) : DataAttribute
 {
-    private string[] fileNames;
-
-    public InfoOfFileAttribute(params string[] fileNames)
-    {
-        this.fileNames = fileNames;
-    }
+    private string[] fileNames = fileNames;
 
     public override IEnumerable<object[]> GetData(MethodInfo testMethod)
     {
@@ -25,8 +19,5 @@ public class InfoOfFileAttribute : DataAttribute, IXunitSerializable
 
         yield return prms;
     }
-
-    public void Serialize(IXunitSerializationInfo info) => info.AddValue(nameof(fileNames), fileNames);
-    public void Deserialize(IXunitSerializationInfo info) => fileNames = (string[])info.GetValue(nameof(fileNames), typeof(string[]));
 }
 

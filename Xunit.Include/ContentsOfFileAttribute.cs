@@ -18,7 +18,7 @@ public class ContentsOfFileAttribute : DataAttribute
     public override IEnumerable<object[]> GetData(MethodInfo testMethod)
     {
         object[] prms = FileNames
-            .Select(s => File.ReadAllText(PathResolver.Instance.Resolve(s)))
+            .Select(s => new ContentsOfFile(s))
             .Cast<object>()
             .ToArray();
 

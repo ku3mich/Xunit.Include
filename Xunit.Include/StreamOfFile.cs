@@ -19,4 +19,6 @@ public class StreamOfFile : File<FileStream>
         FileName = fileName;
         Init(fileName);
     }
+
+    public static implicit operator Stream?(StreamOfFile streamOfFile) => streamOfFile?.Content;
 }
